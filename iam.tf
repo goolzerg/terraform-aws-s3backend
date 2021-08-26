@@ -30,7 +30,7 @@ EOF
 data "aws_iam_policy_document" "policy_doc" {
   statement {
     actions   = ["s3:ListBucket"]
-    resources = aws_s3_bucket.s3_bucket.arn
+    resources = [aws_s3_bucket.s3_bucket.arn]
   }
 
   statement {
